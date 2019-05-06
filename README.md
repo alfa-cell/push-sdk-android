@@ -15,9 +15,9 @@ dependencies {
 ```
 
 ### Setting up the SDK
-The second step is to initialize SDK, with two parameters
-APPLICATION_CODE you can get from the [alfa-cell website](https://dashboard.alfa-cell.com/)
-UNIQUE_DEVICE_ID is any unique device identifier.
+The second step is to initialize SDK, with two parameters:  
+APPLICATION_CODE you can get from the [alfa-cell website](https://dashboard.alfa-cell.com/)  
+UNIQUE_DEVICE_ID is any unique device identifier.  
 You can initialize the SDK in Application or Activity.
 
 ```java
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-The third step is to register your push token with SDK. 
+The third step is to register your push token with SDK.  
 You can get this token from the Firebase Cloud Messaging and register it in the Activity or in the FCM services
 
 ```java
@@ -52,8 +52,8 @@ public void tokenRegistration(String token) {
     }
 ```
 
-The fourth step is to register your push status with SDK
-The messageId you will receive from the json with the key "messageId"
+The fourth step is to register your push status with SDK.  
+The messageId you will receive from the json from the key "messageId".
 ```java
 @Override
 public void onMessageReceived(RemoteMessage remoteMessage) {
