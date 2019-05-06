@@ -1,4 +1,30 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+
+ext {
+    bintrayRepo = "PushSdk"
+    bintrayName = "com.alfa.cell.push.sdk"
+
+    libraryName = 'sdk'
+
+    publishedGroupId = 'com.alfa.cell.push.sdk'
+    artifact = 'sdk'
+    libraryVersion = '1.0.0'
+
+    libraryDescription = 'A push status library in Java for Android'
+
+    siteUrl = 'https://github.com/alfa-cell/push-sdk-android'
+    gitUrl = 'https://github.com/alfa-cell/push-sdk-android.git'
+
+    developerId = 'alfa-cell'
+    developerName = 'Eugene Palesika'
+    developerEmail = 'eugene.palesika@onix-systems.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
 
 android {
     compileSdkVersion 28
@@ -35,3 +61,6 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.14.1'
 }
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
